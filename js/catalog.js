@@ -16,11 +16,8 @@ function populateForm() {
     option.setAttribute('value', Product.allProducts[i].name);
     option.textContent = Product.allProducts[i].name;
     selectElement.appendChild(option);
-    console.log(option);
-
 
   }
-
 }
 
 // When someone submits the form, we need to add the selected item to the cart
@@ -44,7 +41,26 @@ function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   // TODO: get the quantity
   // TODO: using those, add one item to the Cart
+
+  var addSelectedItem = document.getElementById('items').value;
+  var selectedItemQuantity = document.getElementById('quantity').value;
+  var cat = document.getElementById('catalog');
+  var input = cat.querySelectorAll('input[type=submit]');
+  var submitTag = input[0];
+  submitTag.addEventListener('click', function(e){
+    console.log(addSelectedItem);
+    //cart.push(addSelectedItem);
+    //cart.push(selectedItemQuantity);
+  });
+  console.log(addSelectedItem);
+  console.log(selectedItemQuantity);
+  console.log(input);
+  console.log(submitTag);
+
 }
+console.log(addSelectedItemToCart());
+console.log(cart);
+
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {}
