@@ -49,8 +49,7 @@ function addSelectedItemToCart() {
   var submitTag = input[0];
   submitTag.addEventListener('click', function(e){
     console.log(addSelectedItem);
-    //cart.push(addSelectedItem);
-    //cart.push(selectedItemQuantity);
+    
   });
   console.log(addSelectedItem);
   console.log(selectedItemQuantity);
